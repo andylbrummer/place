@@ -1,0 +1,16 @@
+extends layout
+
+block header
+    h1 Place Austin Source Information
+block content
+    ul
+        - for (var i = sources.length-1; i--;) {
+          li
+            a(href=sources[i].src)
+              img(src=sources[i].path)
+        - }
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src='/javascripts/jquery.isotope.min.js')
+    script.
+        $('ul').isotope();
+        $('img').load(function() {$('ul').isotope(); });

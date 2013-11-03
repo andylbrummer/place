@@ -1,0 +1,22 @@
+extends layout
+
+block header
+    h1= title
+block content
+  p Welcome to place Austin.  This is a site in the vein of
+    a(href='http://placekitten.com/')
+     | place kitten.
+  p It is a simple source for getting placeholder images of the city of Austin.
+  p The images are sized using the following pattern:&nbsp;
+    span.example http://place.standardbeagle.com/austin/image/[width]/[height]/
+  p If you want multiple images of the same size, you can use an index parameter:&nbsp;
+    span.example http://place.standardbeagle.com/austin/image/[width]/[height]?index=[val]
+  p That's pretty much all there is to it.  If you have any comments, or suggestions you can reach us at our &nbsp;
+    a(href='http://standardbeagle.com/#footer-widgets') contact form.
+  .img-box
+      img(src='/austin/image/400/300')
+      img(src='/austin/image/100/90?index=1')
+      img(src='/austin/image/100/90?index=2')
+      img(src='/austin/image/100/100?index=3')
+      img(src='/austin/image/510/390?index=5')
+
